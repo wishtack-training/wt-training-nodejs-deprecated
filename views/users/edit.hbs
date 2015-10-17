@@ -4,19 +4,21 @@
 
     <input
         name="firstName"
-        placeholder="First Name"
-        value="{{firstName}}"/>
+        placeholder="First Name"/>
 
     <input
         name="lastName"
-        placeholder="Last Name"
-        value="{{lastName}}"/>
+        placeholder="Last Name"/>
 
     <button type="submit">SAVE</button>
 
 </form>
 
-<div>
-    <span class="wt-first-name">{{firstName}}</span>
-    <span class="wt-last-name">{{lastName}}</span>
-</div>
+<ul>
+    {{#each userList as |user|}}
+    <li>
+        <span class="wt-first-name">{{user.firstName}}</span>
+        <span class="wt-last-name">{{user.lastName}}</span>
+    </li>
+    {{/each}}
+</ul>
