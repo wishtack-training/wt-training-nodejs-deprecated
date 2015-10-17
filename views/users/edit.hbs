@@ -1,6 +1,4 @@
-<form
-    action="/users/edit"
-    method="post">
+<form>
 
     <input
         name="firstName"
@@ -12,13 +10,10 @@
 
     <button type="submit">SAVE</button>
 
+    <button id="wt-reset-list" type="button">RESET LIST</button>
+
 </form>
 
 <ul>
-    {{#each userList as |user|}}
-    <li>
-        <span class="wt-first-name">{{user.firstName}}</span>
-        <span class="wt-last-name">{{user.lastName}}</span>
-    </li>
-    {{/each}}
+
 </ul>
